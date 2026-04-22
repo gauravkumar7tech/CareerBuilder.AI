@@ -44,7 +44,7 @@ app.use('/api/roadmap', roadmapRoutes);
 // Serve frontend in production
 if (process.env.NODE_ENV === 'production') {
   // Handle different deployment scenarios
-  const frontendPath = process.env.FRONTEND_BUILD_PATH || path.join(__dirname, '../frontend/dist');
+  const frontendPath = process.env.FRONTEND_BUILD_PATH || path.join(__dirname, '..', 'frontend', 'dist');
 
   // Serve static files
   app.use(express.static(frontendPath));
